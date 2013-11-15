@@ -19,8 +19,8 @@ public class main_bar : MonoBehaviour {
 		
 		// initialize character information measurements
 		this.character_width = 200;
-		this.commands_width = 948;
 		this.minimap_width = 200;
+		this.commands_width = Screen.width - 2 * horizontal_offset - (this.character_width + this.minimap_width);
 		
 		// set up the rectangle
 		this.rectangle = new Rect(
@@ -32,7 +32,6 @@ public class main_bar : MonoBehaviour {
 	}
 	
 	void OnGUI () {
-
 		// make the character section
 		GUI.Box (
 			new Rect(
