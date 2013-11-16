@@ -15,7 +15,9 @@ public class Character : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.position = new Vector2(this.position.x + 0.1f, this.position.y);
-		this.gameObject.transform.position = new Vector3((float)this.position.x, 0f, (float)this.position.y);
+		if (Time.timeScale != 0) {
+			this.position = new Vector2(this.position.x + 0.1f, this.position.y);
+			this.gameObject.transform.position = new Vector3((float)this.position.x, 0f, (float)this.position.y);
+		}
 	}
 }
