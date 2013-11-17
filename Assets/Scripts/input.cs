@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class keyboard_input : MonoBehaviour {
+public class input : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -10,6 +10,7 @@ public class keyboard_input : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		// Space bar pauses and unpauses
 		if(Input.GetKeyDown("space")) {
 			Debug.Log ("space");
 			if (Time.timeScale == 0) {
@@ -18,5 +19,7 @@ public class keyboard_input : MonoBehaviour {
 				Time.timeScale = 0;	
 			}
 		}
+		
+		
  	}
 }
